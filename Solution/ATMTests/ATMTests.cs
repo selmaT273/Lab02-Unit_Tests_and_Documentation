@@ -89,7 +89,7 @@ namespace ATM
             // Arrange: Create an instance of ATM class by calling ATM constructor
             ATM atm = new ATM(100);
 
-            // Act: Calling DepositMoney with negative amount but not executed yet
+            // Act: Calling WithdrawMoney with negative amount but not executed yet
             Action withdrawNegative = () => atm.WithdrawMoney(-5);
 
             // Assert argument exception is thrown when negative amount is withdrawn
