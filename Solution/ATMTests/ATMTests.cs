@@ -42,11 +42,12 @@ namespace ATM
             // Arrange: Create an instance of ATM class by calling ATM constructor
             ATM atm = new ATM(100);
 
-            // Act: Calling DepositMoney with negative amount
-            atm.DepositMoney(-5);
+            // Act: Calling DepositMoney with negative amount but not executed yet
+            Action depositNegative = () => atm.DepositMoney(-5);
 
-            // Assert
-            Assert.Equal(expected, atm.ViewBalance());
+            // Assert argument exception is thrown when negative amount is deposited
+            ArgumentException exception = Assert.Throws<ArgumentException>(depositNegative);
+            Assert.Equal("Cannot deposit a negative amount.", exception.Message);
         }
 
 

@@ -28,7 +28,13 @@ namespace ATM
         // Add Money method
         public void DepositMoney(int depositAmount)
         {
+            if(depositAmount < 0)
+            {
+               throw new ArgumentException("Cannot deposit a negative amount.");
+            }
+            
             balance += depositAmount;
+            
         }
 
         // Withdraw Money method
