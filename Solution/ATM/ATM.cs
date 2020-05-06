@@ -1,12 +1,15 @@
 ﻿using System;
 namespace ATM
 {
+    // Class of non static methods so we can initialize our class per test
+    // So that it has its own instance of the class and the tests can run parallel
+
     public class ATM
     {
         // Variable to represent the account balance 
         private decimal balance;
 
-        // Default constructor for ATM
+        // Default constructor for ATM so that we can create multiple instances of balance
         public ATM()
         {
             // Initialize the inital balance as 0
