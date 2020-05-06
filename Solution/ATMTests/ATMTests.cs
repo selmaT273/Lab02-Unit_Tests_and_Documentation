@@ -14,13 +14,15 @@ namespace ATM
         }
 
         [Theory]
-        [InlineData(5, 5)]
-        public void DepositMoneyTest(int depositAmount, int expected)
+        [InlineData(5, 6, 11)]
+        [InlineData(100, 101, 201)]
+        public void DepositMoneyTest(int depositAmount1, int depositAmount2, int expected)
         {
             // Create an instance of ATM class by calling ATM constructor
             ATM atm = new ATM();
             // Calling DepositMoney with $5
-            atm.DepositMoney(depositAmount);
+            atm.DepositMoney(depositAmount1);
+            atm.DepositMoney(depositAmount2);
             Assert.Equal(expected, atm.ViewBalance());
         }
     }
