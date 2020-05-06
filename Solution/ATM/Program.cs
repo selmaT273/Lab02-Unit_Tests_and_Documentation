@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace Lab02_Unit_Tests_and_Documentation
+namespace ATM
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
+
+       
     }
 }
