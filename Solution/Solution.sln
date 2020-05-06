@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATM", "ATM\ATM.csproj", "{144AB75C-5FDE-4C01-A663-C72AD0458605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATMTests", "ATMTests\ATMTests.csproj", "{337F7330-DA1F-4FF7-91B1-4795BEB933F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{144AB75C-5FDE-4C01-A663-C72AD0458605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{144AB75C-5FDE-4C01-A663-C72AD0458605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{144AB75C-5FDE-4C01-A663-C72AD0458605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{144AB75C-5FDE-4C01-A663-C72AD0458605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{337F7330-DA1F-4FF7-91B1-4795BEB933F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337F7330-DA1F-4FF7-91B1-4795BEB933F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337F7330-DA1F-4FF7-91B1-4795BEB933F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337F7330-DA1F-4FF7-91B1-4795BEB933F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
