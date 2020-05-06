@@ -43,6 +43,9 @@ namespace ATM
             if(withdrawAmount > balance)
             {
                 throw new ArgumentException("Withdraw amount exceeds your current balance.");
+            } else if (withdrawAmount < 0)
+            {
+                throw new ArgumentException("Cannot withdraw a negative amount.");
             }
 
             balance -= withdrawAmount;

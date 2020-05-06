@@ -81,5 +81,20 @@ namespace ATM
             ArgumentException exception = Assert.Throws<ArgumentException>(overdraft);
             Assert.Equal("Withdraw amount exceeds your current balance.", exception.Message);
         }
+
+        // Test if user tries to withdraw a negative amount 
+        [Fact]
+        public void WithdrawNegativeAmountTest()
+        {
+            // Arrange: Create an instance of ATM class by calling ATM constructor
+            ATM atm = new ATM(100);
+
+            // Act: Calling DepositMoney with negative amount but not executed yet
+            Action withdrawNegative = () => atm.WithdrawMoney(-5);
+
+            // Assert argument exception is thrown when negative amount is withdrawn
+            ArgumentException exception = Assert.Throws<ArgumentException>(withdrawNegative);
+            Assert.Equal("Cannot withdraw a negative amount.", exception.Message);
+        }
     }
 }
