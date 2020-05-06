@@ -3,11 +3,13 @@ namespace ATM
 {
     public class ATM
     {
+        // Constructor
         public ATM()
         {
+
         }
 
-        public static int Testing()
+        public int ViewBalance()
         {
             return 5;
         }
