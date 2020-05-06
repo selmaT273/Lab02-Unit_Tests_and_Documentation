@@ -66,5 +66,20 @@ namespace ATM
             //Assert
             Assert.Equal(expected, atm.ViewBalance());
         }
+
+        // Test if user tries to overdraft 
+        [Fact]
+        public void OverdraftTest()
+        {
+            // Arrange: Create an instance of ATM class by calling ATM constructor
+            ATM atm = new ATM(100);
+
+            // Act: Calling overdraft with amount larger than balance, but not executed yet
+            Action overdraft = () => atm.WithdrawMoney(101);
+
+            // Assert argument exception is thrown when withdraw amount exceeds balance
+            ArgumentException exception = Assert.Throws<ArgumentException>(overdraft);
+            Assert.Equal("Withdraw amount exceeds your current balance.", exception.Message);
+        }
     }
 }

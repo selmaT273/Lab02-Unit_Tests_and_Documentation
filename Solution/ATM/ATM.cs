@@ -40,6 +40,11 @@ namespace ATM
         // Withdraw Money method
         public void WithdrawMoney(decimal withdrawAmount)
         {
+            if(withdrawAmount > balance)
+            {
+                throw new ArgumentException("Withdraw amount exceeds your current balance.");
+            }
+
             balance -= withdrawAmount;
         }
     }
