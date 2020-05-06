@@ -4,7 +4,7 @@ namespace ATM
     public class ATM
     {
         // Variable to represent the account balance 
-        private int balance;
+        private decimal balance;
 
         // Default constructor for ATM
         public ATM()
@@ -14,19 +14,19 @@ namespace ATM
         }
 
         // ATM constructor with default balance
-        public ATM(int defaultBalance)
+        public ATM(decimal defaultBalance)
         {
             balance = defaultBalance;
         }
 
         // View Balance method
-        public int ViewBalance()
+        public decimal ViewBalance()
         {
             return balance;
         }
 
         // Add Money method
-        public void DepositMoney(int depositAmount)
+        public void DepositMoney(decimal depositAmount)
         {
             if(depositAmount < 0)
             {
@@ -38,7 +38,7 @@ namespace ATM
         }
 
         // Withdraw Money method
-        public void WithdrawMoney(int withdrawAmount)
+        public void WithdrawMoney(decimal withdrawAmount)
         {
             balance -= withdrawAmount;
         }

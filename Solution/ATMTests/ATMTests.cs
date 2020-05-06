@@ -12,7 +12,7 @@ namespace ATM
             ATM atm = new ATM();
 
             // Act
-            int balance = atm.ViewBalance();
+            decimal balance = atm.ViewBalance();
 
             // Assert
             Assert.Equal(0, balance);
@@ -22,7 +22,7 @@ namespace ATM
         [Theory]
         [InlineData(5, 6, 11)]
         [InlineData(100, 101, 201)]
-        public void DepositMoneyTest(int depositAmount1, int depositAmount2, int expected)
+        public void DepositMoneyTest(decimal depositAmount1, decimal depositAmount2, decimal expected)
         {
             // Arrange: Create an instance of ATM class by calling ATM constructor
             ATM atm = new ATM();
@@ -55,7 +55,7 @@ namespace ATM
         [Theory]
         [InlineData(7, 4, 3)]
         [InlineData(100, 10, 90)]
-        public void WithdrawMoneyTest(int initialBalance, int withdrawAmount, int expected)
+        public void WithdrawMoneyTest(decimal initialBalance, decimal withdrawAmount, decimal expected)
         {
             // Arrange: Create an instance of ATM class by calling ATM constructor
             ATM atm = new ATM(initialBalance);
