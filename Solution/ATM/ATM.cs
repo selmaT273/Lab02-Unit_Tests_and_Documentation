@@ -3,19 +3,22 @@ namespace ATM
 {
     public class ATM
     {
+        private int balance;
+
         // Constructor
         public ATM()
         {
             // Initialize the inital balance as 0
-            Balance = 0;
+            balance = 0;
         }
-
-        // Creating a Balance property/variable that can change in value and be retrieved
-        private int Balance { get; set; }
 
         public int ViewBalance()
         {
-            return Balance;
+            return balance;
+        }
+        public void DepositMoney(int depositAmount)
+        {
+            balance += depositAmount;
         }
     }
 }
