@@ -3,6 +3,7 @@ namespace ATM
 {
     public class ATM
     {
+        // Variable to represent the account balance 
         private int balance;
 
         // Default constructor for ATM
