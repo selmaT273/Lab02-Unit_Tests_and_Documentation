@@ -22,6 +22,8 @@ namespace ATM
                                   "Exit");
                 string userInput = Console.ReadLine().ToLower();
 
+                // Eventually put "try" here
+
                 if (userInput == "view balance")
                 {
                     Console.WriteLine($"Your balance is {atm.ViewBalance()}");
@@ -37,11 +39,23 @@ namespace ATM
                     Console.WriteLine($"You deposited ${depositAmount}. \n" +
                                       $"Your new balance is {atm.ViewBalance()}");
                 }
-                //else if (userInput ==)
+                else if (userInput == "withdraw money")
+                {
+                    Console.WriteLine($"How much would you like to withdraw?");
+                    decimal withdrawAmount = decimal.Parse(Console.ReadLine());
+
+                    // Call Withdraw Money to update balance
+                    atm.WithdrawMoney(withdrawAmount);
+
+                    Console.WriteLine($"You withdrew ${withdrawAmount}. \n" +
+                                      $"Your new balance is {atm.ViewBalance()}");
+                }
                 else if (userInput == "exit")
                 {
                     break;
                 }
+
+                // Catch here
             }
            
         }
