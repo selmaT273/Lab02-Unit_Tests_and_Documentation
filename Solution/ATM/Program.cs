@@ -26,6 +26,18 @@ namespace ATM
                 {
                     Console.WriteLine($"Your balance is {atm.ViewBalance()}");
                 }
+                else if (userInput == "deposit money")
+                {
+                    Console.WriteLine($"How much would you like to deposit?");
+                    decimal depositAmount = decimal.Parse(Console.ReadLine());
+
+                    // Call Deposit Money to update balance
+                    atm.DepositMoney(depositAmount);
+
+                    Console.WriteLine($"You deposited ${depositAmount}. \n" +
+                                      $"Your new balance is {atm.ViewBalance()}");
+                }
+                //else if (userInput ==)
                 else if (userInput == "exit")
                 {
                     break;
