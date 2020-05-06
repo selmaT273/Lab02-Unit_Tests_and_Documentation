@@ -37,7 +37,7 @@ namespace ATM
                     atm.DepositMoney(depositAmount);
 
                     Console.WriteLine($"You deposited ${depositAmount}. \n" +
-                                      $"Your new balance is {atm.ViewBalance()}");
+                                      $"Your new balance is ${atm.ViewBalance()}");
                 }
                 else if (userInput == "withdraw money")
                 {
@@ -48,7 +48,7 @@ namespace ATM
                     atm.WithdrawMoney(withdrawAmount);
 
                     Console.WriteLine($"You withdrew ${withdrawAmount}. \n" +
-                                      $"Your new balance is {atm.ViewBalance()}");
+                                      $"Your new balance is ${atm.ViewBalance()}");
                 }
                 else if (userInput == "exit")
                 {
